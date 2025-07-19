@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SQL-like Stock Query</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🕹️ Dummy Stock SQL Query 🕹️</h1>
+
+    <section class="schema">
+      <h2>📎Stock Table Schema 📜</h2>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>name</td><td>string</td><td>Company full name</td></tr>
+          <tr><td>price</td><td>number</td><td>Current stock price ($)</td></tr>
+          <tr><td>change</td><td>number</td><td>Price change since last close ($)</td></tr>
+          <tr><td>volume</td><td>number</td><td>Trading volume (shares)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="examples">
+      <h2>🎮 Example Queries</h2>
+      <ul>
+        <li><code>SELECT * FROM stocks WHERE price > 150</code></li>
+        <li><code>SELECT * FROM stocks WHERE change < 0</code></li>
+        <li><code>SELECT * FROM stocks WHERE name = "Tesla Inc."</code></li>
+        <li><code>SELECT * FROM stocks WHERE volume >= 20000000</code></li>
+      </ul>
+    </section>
+
+    <textarea id="sqlInput" rows="4" placeholder="Enter your SQL query here..."></textarea>
+    <button id="queryBtn">Run Query</button>
+    <div id="result"></div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
